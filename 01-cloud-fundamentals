@@ -1,39 +1,49 @@
 Here is a complete understanding of myself learning Cloud fundamental, practicing cloud topics.
-Cloud Computing:
-It is basically an accesss to our own server from the cloud provider like AWS, Azure, Google Cloud with also the access to 
-Storage, software, Database, over internet etc without actually buying the hardware phisically but present in data center of these cloud provider.
-AWS Managment Consel: 
-This managment console is like the manager or control panel of the services(EC2,RDS,S3,VPC) we used from AWS cloud Provider.Its like the interface you entered after sign up the account.
-You
- ↓
-Chrome
- ↓
-AWS Management Console
- ↓
-AWS Account
- ↓
-AWS Resources
-__this management console is not only the way to interact it we can also interact it py coding(CLI) and API(s)/SDK.
-AWS Services:
-EC2:
-EC2 (Elastic Compute Cloud) is an AWS service that provides virtual servers in the cloud. An EC2 instance is a virtual computer where you can run operating systems, applications, and workloads without owning the physical server.
+AWS Storage Services:
+As an AWS solution architechture, you should not learning and memorizing the services thoroughly rather you should be able to solve the problems the client faces and helps them to choose suitable services according to their requirements so you should focus on these storage service checklist:
+1) What kind of problem does this service solves?
+2) Who consumes it? <<<<How does an application access this storage?>>>>
+3) Can it be used as a boot/root disk?
+4) How does it scale?<<<<Automatically, manually, practically unlimited>>>>
+5) How is it accessed?<<<<API, EC2(disk), filesystem>>>>
+6) Where does the data live?<<<<Protection against DR and maintain resilience effectively>>>>
+7) What happens if something fails?<<<<Checks durability, Availability, Redudancy , Backup and replication>>>>
+8) How much secure it is?
+9) How much costly it is?
+10) What performace does it provide?<<<<Latency, IOPS, Throughput etc>>>>
+11) What it is suitable for and what it is not suitable for?
+12) Why would i choose this instead of another AWS storage services?
+13) What are its important architectural settings?
 
-S3:(Simple Storage Service)
-S3 is AWS's service for storing files/objects in the cloud. Its just like SSD in our phisical computers.
- 
-RDS:(Relational Database Service)
-RDS is AWS's managed service for running relational databases.
 
-VPC:
-A VPC is a logically isolated virtual network that you create in AWS for your cloud resources. It provides the networking environment that allows resources to communicate with each other and, when configured, with external networks such as the internet.
-Deeper concepts such as IP addressing, subnets, routing, ports, DNS, firewalls, and NAT will be covered in the Networking section.
-After learning these topic, <<<<Build VPC environment , Attack it and secure it>>>>
+You should be able to design your architecture on the basis of clients requirements and this checklist will be a great help to you.
 
-IAM: 
-Identity and Access Managment is an AWS service that controls who can access which AWS resources and what actions are they allwod to do with it. It decides authorities of everyone..
+### Elastic Block Store(EBS):
+EBS comes as a root disk with EC2 server with backed EBS on which we can install operating system and that's why we used as a boot disk because it helps in boot our OS .
+But , we can add additional disk contains volumes for another tasks.
+One EC2 server can operates only one operating system at a time if we have to install another OS we should lauch another EC2 server.
 
-CloudWatch:
-It is basically an AWS service used in monitoring AWS resources.It has its significane in Monitoring & detecting problems.
+### PROS & CONS:
+If i have already one root EBS-backed with EC2 instance why would need another one and when??
+ANS: 
+We could attach another EBS volume if we want to separate the workloads of two different Catogaries one is responsible for OS and other is responsible for additional tasks like DATABASES etc. Also the volume of one EBS disk is Ranged and all process can not be happened on that ranged so we have to maximize the range to help our tasks done.
+EBS only provides the block storage services and filesystem or operating system manages all the information of the file.
 
-CloudTrail:
-CloudTrail is an AWS service used for keeping of record of AWS resources/activity and actions. It has significance in Monitoring & detecting problems.
+<<<<Scaling Service of EBS>>>>
+Capacity Scaling:  
+You can increase the volume of EBS to 1TB but that does not automatically means you should you file system upto 1TB for this to be happened you also have to resize the partition layer between EBS & filesystem.
+Performance Scaling:
+You can increase the performance of your filesystem of EBS by Changing the certain factors;
+1) IOPS:
+Number of read / write operations per second 
+2) Throughput
+Speed of data traveled per second
+3) Volume Type
+Type of EBS volume needed for their workloads
+<<<<gp3, io2, sc1, sc2>>>>
+
+
+<<<<Relationship with one AZ>>>>
+EBS is associated with only one AZ if AZ comes through natural disaster you could not assess it through another availibility zone and you willl need a recovery strategy.
+
+
