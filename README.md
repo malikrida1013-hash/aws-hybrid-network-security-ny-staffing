@@ -135,8 +135,7 @@ I design AWS architectures that are clear enough for a business owner to approve
 
 If you have a similar migration or hybrid network challenge, I would be glad to talk.
 
-**Contact:** *add your name, email, and Upwork or Fiverr profile link here*
-
+Contact: Rida Malik, malikrida1013@gmail.com
 ---
 
 *This is a fictional scenario created for portfolio purposes. Any resemblance to a real company is coincidental.*
