@@ -7,7 +7,7 @@ problems, and possible solutions. Every design decision later in this project
 traces back to it.
 
 <p align="center">
-  <img src="business-understanding-map.png.png" alt="Business understanding map" width="800">
+  <img src="business-understanding-map.png.png" alt="Business understanding map" width="500">
 </p>
 
 *Figure 1: Business understanding map. Scenario details are assumptions for portfolio purposes.*
