@@ -1,2 +1,1 @@
-Business understanding map:
-![Business understanding map](/docs/business-understanding-map.png)
+![Business understanding map](business-understanding-map.png.png)
