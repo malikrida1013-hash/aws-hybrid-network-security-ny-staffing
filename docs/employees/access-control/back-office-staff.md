@@ -18,14 +18,13 @@
 | **In-system Access** | Compliance Team<br>Scheduling Team<br>Payrolls<br>Client Account Management Team<br>Reporting Team | HR Team<br>Reporting Team for dashboard<br>Payrolls and Finance (if required)<br>Legal, risk and Insurance<br>Client Account Management<br>Scheduling |
 | **External Access** | External Background Checks | Regulators and Auditors |
 | **Internal Access** | Field-Employees Website Access | --- |
-| **Security Impact on Business** | Data breaching of employees | Weak audit trail<br>Loss of clients<br>Legal and financial<br>Physical and Data Security | \ \ \
-
-
-**Fetched Data:**
+| **Security Impact on Business** | Data breaching of employees | Weak audit trail<br>Loss of clients<br>Legal and financial<br>Physical and Data Security | 
 
 
 
-**Transferd Data:**
+How the Access should be controlled?
+What kind of Access does they need?
+What we should used to authorized that Access?
 
 
 
