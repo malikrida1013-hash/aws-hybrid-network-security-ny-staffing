@@ -32,8 +32,9 @@ The groups are:
 | Executives | Department heads and directors |
 | Executives | Board members and owners |
 
-Their access-control detail and connectively detail is discussed broadly in : 
-[Access Control](employees/access-control/)  
+Their access-control detail and connectively detail is discussed broadly in :\
+[Access Control](employees/access-control/)\
+[Connectivity Control](employees/connecivity/)
 
 
 
