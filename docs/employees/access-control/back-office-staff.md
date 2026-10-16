@@ -18,17 +18,31 @@
 | **In-system Access** | Compliance Team<br>Scheduling Team<br>Payrolls<br>Client Account Management Team<br>Reporting Team | HR Team<br>Reporting Team for dashboard<br>Payrolls and Finance (if required)<br>Legal, risk and Insurance<br>Client Account Management<br>Scheduling |
 | **External Access** | External Background Checks | Regulators and Auditors |
 | **Internal Access** | Field-Employees Website Access | --- |
-| **Security Impact on Business** | Data breaching of employees | Weak audit trail<br>Loss of clients<br>Legal and financial<br>Physical and Data Security |
+| **Security Impact on Business** | Data breaching of employees | Weak audit trail<br>Loss of clients<br>Legal and financial<br>Physical and Data Security | \ \ \
+
+
+**Fetched Data:**
+
+
+
+**Transferd Data:**
+
 
 
 | | Payrolls | Finance and Billing |
 | --- | --- | --- |
-| **Workloads** | Receives HR data(Who is employee , how much they should paid)<br>Receives Time and attendance<br>Calculate Gross Pay<br>Pay taxes<br>Review and approved<br>External Payment Processor/Bank for payment<br>Pay stubs<br>Reporting<br>Stop Pays when off-boarding| |
-| **Current Scope** | | |
-| **Future Scope** | | |
-| **Scope Of Access** | | |
-| **In-system Access** | | |
-| **External Access** | | |
-| **Internal Access** | | |
-| **Security Impact on Business** | | |
+| **Workloads** | Receives HR data(Who is employee , how much they should paid)<br>Receives Time and attendance<br>Calculate Gross Pay<br>Pay taxes<br>Review and approved<br>External Payment Processor/Bank for payment<br>Pay stubs<br>Reporting<br>Stop Pays when off-boarding| Receives Inputs(Client Contracts, Hours billed, labour cost), generate invoices , manages company money, pay company bills, produce financial reports |
+| **Current Scope** | On-premise | On-premise |
+| **Future Scope** | On-premise | On-premise |
+| **Scope Of Access** | Business-level Access only | Business-level Access only|
+| **In-system Access** | HR team<br>Scheduling and Time team<br>Reporting<br>Finance and biling | Payrolls<br>Client Account Management<br>Reporting<br>Scheduling<br>Legal,Risk and Insurance |
+| **External Access** | External Payment Provider<br>Tax Authorities | Banks<br>Vendors and suppliers<br>Auditors and external accountants<br>Tax authorities<br>Insurers |
+| **Internal Access** | --- | --- |
+| **Security Impact on Business** | Fraud and financial loss, employee data breach, legal and tax penalties, loss of staff trust | Revenue generating mishaps, company loss | \
 
+
+
+**Fetched Data:**
+
+
+**Transferd Data:**
