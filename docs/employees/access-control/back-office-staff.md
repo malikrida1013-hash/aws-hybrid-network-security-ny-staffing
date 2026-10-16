@@ -46,3 +46,33 @@
 
 
 **Transferd Data:**
+
+
+| | Client Account Management | Scheduling Team |
+| --- | --- | --- |
+| **Workloads** | Client queries<br>Client Account Setup<br>Record Contracts<br>Client Staffing Requirements<br>Renew contracts or end contracts  | Receive client requirements<br>receive employee information<br>receive eligibility from compliance<br>Scheduled the employee<br>Capture Clock-in,Clock-out<br>Approve HOURS<br>Send approved hours to Payroll and finance and billing<br>Send attendance to HR |
+| **Current Scope** | On-premise | On-premise |
+| **Future Scope** | AWS | AWS |
+| **Scope Of Access** | Business-level Access only | Business level Access + AWS level Access |
+| **In-system Access** | HR team<br>Compliance Team<br>Scheduling Team<br>Reporting Team<br>Finance and Billing Team<br>Legal, risk Insurance team | Field Employee App<br>HR team<br>Compliance Team<br>Payrolls<br>Finance team<br>Reporting team |
+| **External Access** | Clients | --- |
+| **Internal Access** | --- | Field Employee App |
+| **Security Impact on Business** | Client Security Service | |  |
+
+**Fetched Data:**
+
+
+**Transferd Data:**
+
+
+| | Reporting Team | Legal,Risk and Insurance team |
+| --- | --- | --- |
+| **Workloads** | Collects In-system Data<br>Prepared Data<br>Make Dashboards & Reports | Review contract and policies<br>Maintain risk and insurance<br>Manage incidents and disputes<br>Oversight |
+| **Current Scope** | On-premise | On-premise |
+| **Future Scope** | AWS | On-premise |
+| **Scope Of Access** | Business-level Access only | Business level Access  |
+| **In-system Access** | HR team<br>Compliance Team<br>Scheduling Team<br>Payrolls<br>Finance<br>Legal Risk and Insurance team<br>Client Account Management | Finance Team<br> Compliance team<br>HR team<br>Client Account Management<br>Reporting Team |
+| **External Access** | Auditors, Executive, | Legal Consultant and Insurance |
+| **Internal Access** | --- | --- |
+
+
