@@ -33,14 +33,58 @@ The groups are:
 | Executives | Board members and owners |
 
 
-*Access Understanding:*
-| | Field Employees | IT Team | Security Team | Back-Office Staff  | Supervisors | Managers |
+### *Authorization Requirements:*
+
+**C-01** — Field employees use the business application only, with no AWS or server access
+
+**C-02** — Field employees can clock in/out and view only their own hours, pay, assigned building, and weekly dashboard
+
+**C-03** — Supervisors see start and end times and attendance for their own buildings and team only
+
+**C-04** — Supervisors cannot assign staff or view pay rates
+
+**C-05** — Scheduling and Dispatch assigns staff to buildings and shifts, without access to pay or personal records
+
+**C-06** — Screening results are visible only to Compliance and Background Checks
+
+**C-07** — Only Payroll can change pay data
+
+**C-08** — Finance and Client Account Management have no access to employee personal records
+
+**C-09** — Reporting has view-only access to approved datasets
+
+**C-10** — IT and cloud admins get role-based admin access, with no permanent full access
+
+**C-11** — Security and audit roles have read-only access to logs
+
+**C-12** — Executives see summary reports, not individual records
+
+**C-13** — Cross-team access requires approval
+
+**C-14** — The person who enters a record is not the only approver
+
+**C-15** — AD login (SSO) for all, with MFA for sensitive systems
+
+**C-16** — Same-day access removal on role change or exit
+
+**C-17** — Periodic access reviews (frequency requires client approval)
+
+**C-18** — Contractors and temporary workers get limited access that expires, requires client approval
 
 
 
-Their access-control detail and connectively detail is discussed broadly in :\
-[Access Control](employees/access-control/)\
-[Connectivity Control](employees/connecivity/)
+### *Authentication Requirements:*
 
+**R-01** — HR staff authenticate with their existing AD credentials (SSO), with no separate passwords. 
+
+**R-02** — MFA is required for access to restricted HR data (ID documents, background checks, personal records). 
+
+**R-03** — MFA is required every time for remote access. 
+
+**R-04** — HR Managers get the strictest authentication rules. 
+
+**R-05** — Access is removed the same day an employee leaves. 
+
+**R-06** — The MFA method must work for staff without company phones.
 
 
