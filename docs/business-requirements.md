@@ -32,6 +32,12 @@ The groups are:
 | Executives | Department heads and directors |
 | Executives | Board members and owners |
 
+
+*Access Understanding:*
+| | Field Employees | IT Team | Security Team | Back-Office Staff  | Supervisors | Managers |
+
+
+
 Their access-control detail and connectively detail is discussed broadly in :\
 [Access Control](employees/access-control/)\
 [Connectivity Control](employees/connecivity/)
