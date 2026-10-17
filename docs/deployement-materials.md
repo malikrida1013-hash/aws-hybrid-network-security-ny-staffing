@@ -14,7 +14,6 @@
 
 Each System is associated with different groups that are differentiated to their specific tasks or workloads so their permission sets/access profiles are also different.
 
-# *Access Profiles Of HR & Recruiting:*
 
 ## Access Requirements of HR & Recruiting:
 
@@ -41,7 +40,7 @@ Each System is associated with different groups that are differentiated to their
 **A-11** — Field employees have no access to HR data
 
 **A-12** — Access is reviewed periodically, and old access is removed when people change roles
-
+# *Access Profiles Of HR & Recruiting:*
 
 | Field | Recruiters | Verification & On-boarding | HR Manager | Performance & Attendance | Employee Relation |
 | --- | --- | --- | --- | --- | --- | 
@@ -54,7 +53,6 @@ Each System is associated with different groups that are differentiated to their
 | Authentication | AD SSO; MFA for remote access |	AD SSO; MFA always (restricted data) | AD SSO; MFA always, strictest rules | AD SSO; MFA for remote access and restricted records |	AD SSO; MFA for remote access |
 | Status | Proposed | Proposed | Proposed |Proposed | Proposed |Proposed | 
 
-### *Access Profiles Of Compliance:*
 
 ## Access Requirements of Compliance:
 
@@ -80,6 +78,10 @@ Each System is associated with different groups that are differentiated to their
 
 **CC-11** — Access to screening results is limited to named individuals and reviewed periodically (review frequency requires client approval)
 
+
+ ### *Access Profiles Of Compliance:*
+
+ 
 | Field | Screening | Tracking | Manager |
 | --- | --- | --- | --- | 
 | Sub-group / AD group | COMP-Screening | COMP-Tracking & Verification | COMP-Manager |
@@ -92,7 +94,7 @@ Each System is associated with different groups that are differentiated to their
 | Status | Proposed | Proposed | Proposed |
 
 
-### *Access Profiles Of Payrolls:*
+### *Access Requirements Of Payrolls:*
 
 **PR-01** — Only Payroll staff can create or change pay data (rates, deductions, adjustments)
 
@@ -123,7 +125,7 @@ Each System is associated with different groups that are differentiated to their
 **PR-14** — Payroll access is limited to named individuals and reviewed periodically (review frequency requires client approval)
 
 
-## Access Requirements of Payrolls:
+## Access Profiles of Payrolls:
 
 | Field | Payroll Processing | Payroll Audit & Approval | 
 | --- | --- | --- | 
@@ -138,23 +140,50 @@ Each System is associated with different groups that are differentiated to their
 
 
 
+### *Access Requirements Of Finance & Billing:*
+
+
+**FB-01** — Only Finance and Billing staff can create or change invoices, payments, and ledger entries
+
+**FB-02** — Billing and Invoicing staff access client rates, billable hours, and invoice history
+
+**FB-03** — Finance staff can read billable hours from the clock-in system but cannot change them
+
+**FB-04** — Finance staff can view client contract rates and payment terms but cannot change contracts (owned by Client Account Management)
+
+**FB-05** — Finance and Billing receive payroll totals only, with no access to individual pay details or employee personal records
+
+**FB-06** — The person who enters a vendor bill or payment request cannot also approve it (separation of duties)
+
+**FB-07** — The Finance Manager approves invoice adjustments, credit notes, write-offs, and vendor payments above the approval limit (limit requires client approval)
+
+**FB-08** — Vendor and client bank details are restricted to Accounts Receivable and Payable staff who process payments
+
+**FB-09** — Reporting and Legal have view-only access to approved financial data (requires client approval)
+
+**FB-10** — Every change to an invoice, payment, or ledger entry is logged for audit
+
+**FB-11** — Access is through the finance application, with no direct database access
+
+**FB-12** — Financial records are retained for the legally required period (retention period requires client approval)
+
+**FB-13** — Finance access is limited to named individuals and reviewed periodically (review frequency requires client approval)
 
 
 
 
 
+### *Access Profiles Of Finance & Billing:*
 
-
-
-
-| Field | Payroll Processing | Payroll Audit & Approval | 
-| Sub-Group / AD group | 
-| Application and Level | 
-| File shares | 
-| Database Access | 
-| Explicitly denied | 
-| Network path | 
-| Authentication | 
-| Status |
+| Field | Billing & Invoicing | Accounts Receivable & Payable |	Finance Manager |
+| --- | --- | --- | --- | 
+| Sub-Group / AD group |  FIN-Billing | FIN-Paying | FIN-Manager |
+| Application and Level | Finance application (invoices, client rates): View/Edit; clock-in system (billable hours): View; client contracts (rates and terms): View; email |	Finance application (ledger, payments, vendor bills): View/Edit; bank payment portal: View/Edit at Lead level; email	| Finance application: View across all, Approve (adjustments, credit notes, write-offs, payments above limit); financial reports: Run |
+| File shares | Invoices and billing folder: Read/Write |	Payments and ledger folder: Read/Write	| Finance shared folders: Read; approvals folder: Read/Write |
+| Database Access | Application-only; no direct access (FB-11)	| Application-only; no direct access (FB-11)	| Application-only; no direct access (FB-11) |
+| Explicitly denied | 	Individual pay data, employee personal records (FB-05), changing clock-in hours (FB-03), changing contracts (FB-04) |	Individual pay data, employee personal records (FB-05), approving own entries (FB-06), changing contracts (FB-04) |	Direct database access (FB-11), approving own entries (FB-06), individual pay data (FB-05) |
+| Network path | Corporate LAN; VPN with MFA for remote work	| Corporate LAN; VPN with MFA for remote work |	Corporate LAN; VPN with MFA for remote work |
+| Authentication | 	AD SSO; MFA for remote access	| AD SSO; MFA always (bank details), named individuals only |	AD SSO; MFA always, strictest rules |
+| Status | Proposed	| Proposed; bank portal access requires client approval	| Proposed; approval limit requires client approval |
 
 
