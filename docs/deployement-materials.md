@@ -56,7 +56,7 @@ Each System is associated with different groups that are differentiated to their
 
 ### *Access Profiles Of Compliance:*
 
-## Access Requirements of HR & Recruiting:
+## Access Requirements of Compliance:
 
 **CC-01** — Screening results are visible only to staff who run or review background checks
 
@@ -92,5 +92,69 @@ Each System is associated with different groups that are differentiated to their
 | Status | Proposed | Proposed | Proposed |
 
 
+### *Access Profiles Of Payrolls:*
+
+**PR-01** — Only Payroll staff can create or change pay data (rates, deductions, adjustments)
+
+**PR-02** — Payroll Processing prepares payroll runs and issues pay stubs
+
+**PR-03** — The person who prepared a payroll run cannot also approve it (separation of duties)
+
+**PR-04** — Payroll Audit and Approval reviews and approves payroll runs, corrections, and one-off payments
+
+**PR-05** — Payroll can read hours from the clock-in system but cannot change them
+
+**PR-06** — Field employees can view only their own pay stubs
+
+**PR-07** — HR has view-only access to pay stubs for employee inquiries (requires client approval)
+
+**PR-08** — Finance and Billing receive payroll totals only, with no access to individual pay details
+
+**PR-09** — Supervisors and Scheduling and Dispatch cannot view pay rates
+
+**PR-10** — Bank details and tax information are restricted to Payroll staff who process pay
+
+**PR-11** — Every change to pay data and every payroll run is logged for audit
+
+**PR-12** — Access is through the payroll application, with no direct database access
+
+**PR-13** — Payroll records are retained for the legally required period (retention period requires client approval)
+
+**PR-14** — Payroll access is limited to named individuals and reviewed periodically (review frequency requires client approval)
+
+
+## Access Requirements of Payrolls:
+
+| Field | Payroll Processing | Payroll Audit & Approval | 
+| --- | --- | --- | 
+| Sub-Group / AD group | PR-Processing | PR-Audit & Approval | 
+| Application and Level | Payroll application: View/Edit (rates, deductions, runs, pay stubs); clock-in system (hours): View; email |	Payroll application: View across runs, Approve (runs, corrections, one-off payments); audit reports: Run; clock-in system (hours): View |
+| File shares | Payroll working files folder: Read/Write	| Payroll approvals and audit folder: Read/Write; payroll working files: Read |
+| Database Access | Application-only; no direct access (PR-12) |	Application-only; no direct access (PR-12) |
+| Explicitly denied |	Approving own payroll runs (PR-03), changing clock-in hours (PR-05), screening results, HR case notes |	Preparing runs they approve (PR-03), changing clock-in hours (PR-05), direct database access (PR-12) | 
+| Network path | Corporate LAN; VPN with MFA for remote work |	Corporate LAN; VPN with MFA for remote work |
+| Authentication | AD SSO; MFA always (restricted data), named individuals only |	AD SSO; MFA always, strictest rules |
+| Status | Proposed | Proposed |
+
+
+
+
+
+
+
+
+
+
+
+
+| Field | Payroll Processing | Payroll Audit & Approval | 
+| Sub-Group / AD group | 
+| Application and Level | 
+| File shares | 
+| Database Access | 
+| Explicitly denied | 
+| Network path | 
+| Authentication | 
+| Status |
 
 
