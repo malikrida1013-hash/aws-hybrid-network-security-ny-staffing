@@ -9,6 +9,15 @@
 - Client Account Management
 
 
+*ACCESS TABLE;*
+
+<p align="center">
+  <img src="access-table.png.png" alt="Access table" width="900">
+</p>
+
+
+
+## *Workloads:* 
 |  | HR and Recruiting | Compliance Team |
 |---|---|---|
 | **Workloads** | Hiring posting<br>Documents collection<br>Interviewing<br>Background Checks Verification<br>Selection<br>Onboarding<br>Records management<br>Receiving request<br>Relation b/w employee and clients<br>Scheduling and Dispatch Review<br>Performance and attendance<br>Off-boarding<br>Reporting team | Receiving HR data<br>Verifying eligibility wrt work<br>Review external background checks<br>Matching with eligibility criteria<br>Update the status<br>Verifying license and certification<br>Auditing Preparation<br>Incident solving wrt Compliance rules<br>Transfer high incidents to legal, law and insurance team |
@@ -259,8 +268,137 @@ Each System is associated with different groups that are differentiated to their
 | Status | Proposed	| Proposed; bank portal access requires client approval	| Proposed; approval limit requires client approval |
 
 
-### *Access Profiles Of Finance & Billing:*
+### *Access Requirements Of Scheduling & Dispatch:*
+
+SD-01 - Scheduling and Dispatch staff assign employees to buildings and shifts, and supervisors do not
+
+**SD-02** — Scheduling and Dispatch can view only whether a person is cleared to work, with no reasons given
+
+**SD-03**  — Scheduling and Dispatch cannot view pay rates, pay data, or screening details
+
+**SD-04** — Scheduling and Dispatch can read clock-in hours for the buildings they schedule and cannot change a punch
+
+**SD-05** — Scheduling and Dispatch approve time-off requests, shift swaps, and missed-punch corrections (approver requires client approval)
+
+**SD-06** — The person who requests a shift change or correction cannot also approve it (separation of duties)
+
+**SD-07 - Scheduling and Dispatch can view building requirements and client coverage terms, and cannot change contracts (owned by Client Account Management)
+
+**SD-08** — Scheduling and Dispatch can view an employee’s name, role, license status, and availability, and cannot view HR records or personal documents
+
+**SD-09** — Every assignment, schedule change, and approved correction is logged for audit
+
+**SD-10** — Access is through the scheduling application, with no direct database access
+
+**SD-11** — Scheduling access is limited to named individuals and reviewed periodically (review frequency requires client approval)
+
+### *Access Profiles Of Scheduling & Dispatch:*
+
+
+| Field | Scheduling & Dispatch Staff | Scheduling & Dispatch Manager | 
+| --- | --- | --- | --- | 
+| Sub Group / AD-Group | SD-Staff | SD-Manager |
+| Application & Level | Scheduling application (assignments, shifts, availability): View/Edit; clock-in system (hours, buildings they schedule): View; cleared-to-work status: View; client coverage terms: View; employee directory (name, role, license status): View; email	| Scheduling application: View across all, Approve (time-off, shift swaps, missed-punch corrections); schedule reports: Run; clock-in system (hours): View; cleared-to-work status: View |
+| File Shares | Scheduling working files folder: Read/Write	| Scheduling shared folders: Read; approvals and reports folder: Read/Write |
+| Database Access | Application-only; no direct access (SD-10)	| Application-only; no direct access (SD-10) | 
+| Explicitly Denied | Pay rates and pay data (SD-03), screening details and reasons (SD-02, SD-03), HR records and personal documents (SD-08), changing clock-in hours (SD-04), changing contracts (SD-07), approving own requests (SD-06) |	Direct database access (SD-10), approving own requests (SD-06), pay rates and pay data (SD-03), screening details (SD-02), changing clock-in hours (SD-04), changing contracts (SD-07) |
+| Network path	| Corporate LAN; VPN with MFA for remote work |	Corporate LAN; VPN with MFA for remote work |
+| Authentication |	AD SSO; MFA for remote access, named individuals only (SD-11)	| AD SSO; MFA always, strictest rules |
+| Status |	Proposed	| Proposed; approver for time-off, swaps, and corrections requires client approval (SD-05) |
+
+
+### *Access Requirements Of Reporting:*
+
+**RP-01** - Reporting staff build and run reports from approved, read-only data, and cannot create or change records in any source system
+
+**RP-02** - Reporting receives aggregated payroll totals only, with no access to individual pay details (aligned with PR-08 and FB-05)
+
+**RP-03** - Reporting has view-only access to approved financial data (requires client approval, aligned with FB-09)
+
+**RP-04** - Reporting can view cleared or not-cleared counts only, and cannot view screening details or reasons (aligned with CC-02)
+
+**RP-05** - Reporting can view workforce data (headcount, attendance and hours totals, assignments by building) without names, ID documents, or personal records
+
+**RP-06** - Reports containing individual employee data require approval from the data owner before they are created or shared (data owner approval process requires client approval)
+
+**RP-07** - The person who builds a report cannot also approve it for distribution (separation of duties)
+
+**RP-08** - The Reporting Manager approves new reports, changes to report definitions, and distribution lists
+
+**RP-09** - Every report run, export, and change to a report definition is logged for audit
+
+**RP-10** - Access is through the reporting application, with no direct database access to source systems
+
+**RP-11** - Reporting access is limited to named individuals and reviewed periodically (review frequency requires client approval)
 
 
 
-### *Access Requirements Of Finance & Billing:*
+### *Access Profiles Of Reporting:*
+
+
+
+| Field | Reporting Analyst | Reporting Manager | 
+| --- | --- | --- | 
+| Sub-Group / AD-Group | RPT-Analyst | RPT-Manager | 
+| Application & Level | Reporting application (approved datasets, report builder): View/Edit; dashboards: View/Edit; email	| Reporting application: View across all, Approve (new reports, report changes, distribution lists); audit and usage reports: Run | 
+| File Shares | Reporting working files folder: Read/Write |	Reporting shared folders: Read; approvals and distribution folder: Read/Write |
+| Database Access |	Application-only; no direct access (RP-10)	| Application-only; no direct access (RP-10) |
+| Explicitly Denied | Individual pay data (RP-02), screening details (RP-04), HR personal records and ID documents (RP-05), creating or changing source records (RP-01), approving own reports (RP-07)	| Direct database access (RP-10), approving own reports (RP-07), individual pay data (RP-02), screening details (RP-04), changing source records (RP-01) |
+| Authentication | AD SSO; MFA for remote access, named individuals only (RP-11) |	AD SSO; MFA always, strictest rules |
+| Network Path | Corporate LAN; VPN with MFA for remote work | Corporate LAN; VPN with MFA for remote work | 
+| Status | 	Proposed | 	Proposed; financial data access and individual-data approval process require client approval (RP-03, RP-06) | 
+
+### *Access Requirements Of Legal, Risk & Insurance:*
+
+
+**LR-01** - Legal staff manage legal matters, claims files, and insurance policy records, and cannot create or change records in any source system
+
+**LR-02** - Legal and Risk have view-only access to approved financial data (requires client approval, aligned with FB-09)
+
+**LR-03** - Legal can view client contracts for review, and cannot change them (owned by Client Account Management, aligned with FB-04)
+
+**LR-04** - Legal and Risk can view cleared or not-cleared status only, and cannot view screening details or reasons (aligned with CC-02)
+
+**LR-05** - Legal and Risk can view incident reports and complaint history for open claims or legal matters, and cannot view pay data or general employee records
+
+**LR-06** - Access to an individual employee’s records for a legal matter requires approval from the Legal Manager and the data owner (approval process requires client approval)
+
+**LR-07** - Risk and Insurance staff manage insurance policies, certificates of insurance, and claims records
+
+**LR-08** - The person who opens or prepares a claim or settlement cannot also approve it (separation of duties)
+
+**LR-09** - The Legal Manager approves settlements, legal holds, and external counsel engagements above the approval limit (limit requires client approval)
+
+**LR-10** - Legal holds suspend deletion of the records they cover, and records are released only after Legal Manager approval
+
+**LR-11** - Every access to a legal matter, claim, or contract is logged for audit
+
+**LR-12** - Access is through the legal and risk application, with no direct database access
+
+**LR-13** - Legal and insurance records are retained for the legally required period (retention period requires client approval)
+
+**LR-14** - Legal and Risk access is limited to named individuals and reviewed periodically (review frequency requires client approval)
+
+
+
+### *Access Profiles Of Legal, Risk & Insurance:*
+
+
+| Field | Legal & Contracts	| Risk & Insurance |	Legal & Risk Manager |   
+| --- | --- | --- | --- | 
+| Sub-Group / AD-Group | LGL-Legal | LGL-Risk | LGL-Manager | 
+| Application & Level | Legal and risk application (matters, claims files): View/Edit; client contracts (view only): View; incident and complaint history (open matters): View; cleared-to-work status: View; email | Legal and risk application (insurance policies, certificates, claims): View/Edit; incident reports (open claims): View; cleared-to-work status: View; approved financial data: View (requires client approval); email	| Legal and risk application: View across all, Approve (settlements, legal holds, counsel engagements above limit); audit reports: Run |
+| File Shares | Legal matters folder: Read/Write |	Insurance and claims folder: Read/Write	| Legal and risk shared folders: Read; approvals and holds folder: Read/Write | 
+| Database Access | Application-only; no direct access (LR-12) |	Application-only; no direct access (LR-12)	Application-only; no direct access (LR-12) | 
+| Explicitly Denied | Pay data, general employee records (LR-05), screening details (LR-04), changing contracts (LR-03), approving own settlements (LR-08)	| Pay data, general employee records (LR-05), screening details (LR-04), changing contracts (LR-03), approving own claims (LR-08)	| Direct database access (LR-12), approving own settlements (LR-08), pay data (LR-05), screening details (LR-04) | 
+| Authentication | AD SSO; MFA always (legal matters), named individuals only (LR-14) |	AD SSO; MFA for remote access, named individuals only (LR-14) |	AD SSO; MFA always, strictest rules | 
+| Network Path | Corporate LAN; VPN with MFA for remote work | Corporate LAN; VPN with MFA for remote work | 
+| Status | 	Proposed | 	Proposed | Proposed | 
+
+
+
+
+
+
+
+
