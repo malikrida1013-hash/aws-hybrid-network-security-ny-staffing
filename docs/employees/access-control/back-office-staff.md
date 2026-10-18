@@ -296,7 +296,7 @@ SD-01 - Scheduling and Dispatch staff assign employees to buildings and shifts, 
 
 
 | Field | Scheduling & Dispatch Staff | Scheduling & Dispatch Manager | 
-| --- | --- | --- | --- | 
+| --- | --- | --- | 
 | Sub Group / AD-Group | SD-Staff | SD-Manager |
 | Application & Level | Scheduling application (assignments, shifts, availability): View/Edit; clock-in system (hours, buildings they schedule): View; cleared-to-work status: View; client coverage terms: View; employee directory (name, role, license status): View; email	| Scheduling application: View across all, Approve (time-off, shift swaps, missed-punch corrections); schedule reports: Run; clock-in system (hours): View; cleared-to-work status: View |
 | File Shares | Scheduling working files folder: Read/Write	| Scheduling shared folders: Read; approvals and reports folder: Read/Write |
