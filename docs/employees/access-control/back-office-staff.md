@@ -398,6 +398,52 @@ SD-01 - Scheduling and Dispatch staff assign employees to buildings and shifts, 
 
 
 
+### *Access Requirements Of Client Account Management:*
+
+
+****CA-01**** - Client Account Management staff manage client records, contacts, and service requests for their assigned clients, and cannot create or change records in other source systems
+
+**CA-02** - Contract Administration creates and changes client contracts, rates, and payment terms, and is the only team that can change them (Finance, Scheduling, and Legal have view-only access, aligned with FB-04, SD-07, and LR-03)
+
+**CA-03** - Account Managers can view only the clients, buildings, and contracts assigned to them
+
+**CA-04** - Account Managers can view building coverage, assignments by building, and attendance totals for their clients, with no pay data and no personal records of employees (aligned with RP-05)
+
+**CA-05** - Account Managers can view cleared or not-cleared status only, and cannot view screening details or reasons (aligned with CC-02)
+
+**CA-06** - Account Managers can view invoice status and payment history for their clients, and cannot change invoices or ledger entries (owned by Finance and Billing, FB-01)
+
+**CA-07** - Account Managers log client complaints and service issues, and view related incident reports for their clients’ buildings
+
+**CA-08** - The person who prepares a contract change or rate change cannot also approve it (separation of duties)
+
+**CA-09** - The Client Account Manager approves contract changes, rate changes, discounts, and credits requests above the approval limit (limit requires client approval)
+
+**CA-10** - Client Account Management cannot view or change pay data, employee personal records, or screening details
+
+**CA-11** - Every change to a client record, contract, or rate is logged for audit
+
+**CA-12** - Access is through the client management application, with no direct database access
+
+**CA-13** - Client and contract records are retained for the legally required period (retention period requires client approval)
+
+**CA-14** - Client Account Management access is limited to named individuals and reviewed periodically (review frequency requires client approval)
+
+
+### *Access Profiles Of Client Account Management:*
+
+
+| Field | Account Managers | Contract Administration | Client Account Manager |   
+| --- | --- | --- | --- | 
+| Sub-Group / AD-Group | CAM-Accounts | CAM-Contracts | CAM-Manager | 
+| Application & Level | Client management application (assigned clients, contacts, service requests, complaints): View/Edit; contracts and rates (assigned clients): View; building coverage and assignments (assigned clients): View; incident reports (assigned clients’ buildings): View; invoice status: View; cleared-to-work status: View; email | Client management application (contracts, rates, payment terms): View/Edit; client records: View; email | Client management application: View across all, Approve (contract changes, rate changes, discounts, credit requests above limit); account and contract reports: Run |
+| File Shares | Client account files folder: Read/Write	| Contracts folder: Read/Write |	Client management shared folders: Read; approvals folder: Read/Write | 
+| Database Access | Application-only; no direct access (CA-12) |	Application-only; no direct access (CA-12)	Application-only; no direct access (CA-12) | 
+| Explicitly Denied | Pay data and employee personal records (CA-10), screening details (CA-05), changing contracts and rates (CA-02), changing invoices (CA-06), clients not assigned to them (CA-03)	| Pay data and employee personal records (CA-10), screening details (CA-10), approving own contract changes (CA-08), changing invoices	| Direct database access (CA-12), approving own contract changes (CA-08), pay data and personal records (CA-10), screening details (CA-10) | 
+| Authentication | AD SSO; MFA for remote access, named individuals only (CA-14) | AD SSO; MFA always (contract and rate data), named individuals only (CA-14) | AD SSO; MFA always, strictest rules | 
+| Network Path | Corporate LAN; VPN with MFA for remote work | Corporate LAN; VPN with MFA for remote work | 
+| Status | 	Proposed | 	Proposed | Proposed | 
+
 
 
 
