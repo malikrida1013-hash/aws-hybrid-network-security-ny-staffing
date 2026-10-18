@@ -15,7 +15,7 @@
 Each System is associated with different groups that are differentiated to their specific tasks or workloads so their permission sets/access profiles are also different.
 
 
-## Access Requirements of HR & Recruiting:
+### *Access Requirements of HR & Recruiting:*
 
 **A-01** — Recruiters access candidate data only, with no access to current employee records
 
@@ -40,7 +40,7 @@ Each System is associated with different groups that are differentiated to their
 **A-11** — Field employees have no access to HR data
 
 **A-12** — Access is reviewed periodically, and old access is removed when people change roles
-# *Access Profiles Of HR & Recruiting:*
+### *Access Profiles Of HR & Recruiting:*
 
 | Field | Recruiters | Verification & On-boarding | HR Manager | Performance & Attendance | Employee Relation |
 | --- | --- | --- | --- | --- | --- | 
@@ -54,7 +54,7 @@ Each System is associated with different groups that are differentiated to their
 | Status | Proposed | Proposed | Proposed |Proposed | Proposed |Proposed | 
 
 
-## Access Requirements of Compliance:
+### *Access Requirements of Compliance:*
 
 **CC-01** — Screening results are visible only to staff who run or review background checks
 
@@ -125,7 +125,7 @@ Each System is associated with different groups that are differentiated to their
 **PR-14** — Payroll access is limited to named individuals and reviewed periodically (review frequency requires client approval)
 
 
-## Access Profiles of Payrolls:
+### *Access Profiles of Payrolls:*
 
 | Field | Payroll Processing | Payroll Audit & Approval | 
 | --- | --- | --- | 
@@ -187,3 +187,8 @@ Each System is associated with different groups that are differentiated to their
 | Status | Proposed	| Proposed; bank portal access requires client approval	| Proposed; approval limit requires client approval |
 
 
+### *Access Profiles Of Finance & Billing:*
+
+
+
+### *Access Requirements Of Finance & Billing:*
