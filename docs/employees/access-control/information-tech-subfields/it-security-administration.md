@@ -162,3 +162,24 @@ Change requested by Security-Admins member → approved by a different member of
 <p align="center">
   <img src="security-compliance.png.png" alt="Workload flow Chart" width="900">
 </p>
+
+
+
+### *Permission Sets:*
+
+
+| | AWS	| On-prem |
+| --- | --- | --- | 
+| Access | `Compliance-Auditor` permission set: view-only in all accounts to Audit Manager, AWS Config, Security Hub, IAM Access Analyzer, CloudTrail, and Artifact	| Read-only access to SIEM reports, Active Directory group and access reports, vulnerability scan results, and configuration, patch, and backup status reports |
+| Can write to | Audit Manager assessments and evidence collection only |	GRC and ticketing tools, the policy library, the risk register, and the audit evidence folders |
+| Denied | Changes to systems, IAM, keys, logs, or security tools, business data, billing	| Administrator rights on servers, databases, network devices, and security tools, Domain Admin, business data and business file shares | 
+| How they sign in | IAM Identity Center with AD credentials and MFA	| A separate admin account with MFA, through the jump host for tool and report access | 
+| AD group | `Compliance-Auditors` |	`Compliance-Auditors` | 
+
+
+
+
+
+
+
+
