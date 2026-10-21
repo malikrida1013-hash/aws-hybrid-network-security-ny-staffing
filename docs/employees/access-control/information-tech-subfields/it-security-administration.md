@@ -151,3 +151,14 @@ Change requested by Security-Admins member → approved by a different member of
 - Whether monitoring (security operations) is outsourced to be confirmed
 - Who performs the periodic review of the security team (client management or external auditor) to be decided by the client
 - Exact IAM policy actions for `Security-Admin` and `Security-IncidentResponder` to be documented in the build guide
+
+
+
+
+
+
+## *SECURITY & COMPLIANCE:*
+
+<p align="center">
+  <img src="security-compliance.png.png" alt="Workload flow Chart" width="900">
+</p>
