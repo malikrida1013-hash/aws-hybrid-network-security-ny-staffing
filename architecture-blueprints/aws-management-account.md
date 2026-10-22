@@ -67,7 +67,7 @@ It exists so that:
 
 ## 3. Organization structure
 
-![AWS Organization structure showing the Management account, four OUs holding accounts, and the Workloads parent OU](../architecture-blueprints/01-management-account-ou-structure.png)
+
 
 The organization has five OUs. Four hold accounts, and `Workloads` is a parent that groups the two environment OUs. The structure is two levels deep, which a 14-person IT team can follow without a map (CT-04).
 
