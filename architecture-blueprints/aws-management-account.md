@@ -8,7 +8,7 @@
 | **Position** | Root of the AWS Organization |
 | **Region** | us-east-1 (organization services are managed here) |
 | **Document status** | Draft for client review |
-| **Related documents** | [`06-production-account.md`](./06-production-account.md), [`06-production-account-access.md`](./06-production-account-access.md), [`requirements.md`](../../requirements.md) |
+
 
 > [!NOTE]
 > **Status labels used in this document**
