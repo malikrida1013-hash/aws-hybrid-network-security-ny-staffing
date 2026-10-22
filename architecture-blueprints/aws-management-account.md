@@ -1,7 +1,6 @@
 
 # Management Account: Organization, Guardrails, and Billing
-
-
+![Production account architecture showing the load balancer, application servers, and databases across two Availability Zones](../architecture-blueprints/managementaccount..png)
 | | |
 |---|---|
 | **Project** | NY staffing company, multi-account AWS architecture |
