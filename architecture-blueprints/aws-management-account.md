@@ -1,6 +1,7 @@
 
 # Management Account: Organization, Guardrails, and Billing
 
+
 | | |
 |---|---|
 | **Project** | NY staffing company, multi-account AWS architecture |
