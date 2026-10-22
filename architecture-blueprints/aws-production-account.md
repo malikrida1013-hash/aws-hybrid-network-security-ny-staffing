@@ -1,6 +1,5 @@
 
 # Production Account: Access and Connectivity
-![Production account architecture showing the load balancer, application servers, and databases across two Availability Zones](../architecture-blueprints/productionaccount.drawio)
 
 | | |
 |---|---|
