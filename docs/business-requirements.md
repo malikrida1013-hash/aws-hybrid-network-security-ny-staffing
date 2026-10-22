@@ -92,7 +92,7 @@ The groups are:
 ### *Architecture Requirements:*
 
 
-# Architecture Requirements
+
 
 **Client:** New York building staffing company
 **Project:** Multi-account AWS architecture (hybrid, ~50% of workloads to AWS)
