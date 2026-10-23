@@ -12,7 +12,7 @@
 | **OU** | Security |
 | **Region** | us-east-1 (primary), us-east-2 (copy for DR) |
 | **Document status** | Draft for client review |
-| **Related documents** | [`01-management-account.md`](./01-management-account.md), [`06-production-account.md`](./06-production-account.md), [`requirements.md`](../../requirements.md) |
+
 
 > [!NOTE]
 > **Status labels used in this document**
