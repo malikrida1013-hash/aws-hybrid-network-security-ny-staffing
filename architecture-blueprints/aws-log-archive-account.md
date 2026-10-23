@@ -1,3 +1,3 @@
 ![Log Archive account architecture](../architecture-blueprints/logarchiveaccount.png)
 
-[Open the sharp SVG version](../architecture-blueprints/logarchiveaccount.svg)
+[Open the sharp SVG version](../architecture-blueprints/logarchive-account.svg)
