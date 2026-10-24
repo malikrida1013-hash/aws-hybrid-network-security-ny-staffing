@@ -1,5 +1,7 @@
 # Network Account: One Private Doorway to On-Prem
+![Network account architecture](../architecture-blueprints/networkaccount.png)
 
+[Open the sharp SVG version](../architecture-blueprints/networkaccount.svg)
 | | |
 |---|---|
 | **Project** | NY staffing company, multi-account AWS architecture |
@@ -7,7 +9,7 @@
 | **OU** | Infrastructure |
 | **Region** | us-east-1 (primary), us-east-2 (DR gateway, needs approval) |
 | **Document status** | Draft for client review |
-| **Related documents** | [`01-management-account.md`](./01-management-account.md), [`05-backup-account.md`](./05-backup-account.md), [`06-production-account.md`](./06-production-account.md), [`06-production-account-access.md`](./06-production-account-access.md), [`requirements.md`](../../requirements.md) |
+
 
 > [!NOTE]
 > **Status labels used in this document**
