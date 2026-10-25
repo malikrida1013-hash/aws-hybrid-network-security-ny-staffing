@@ -1,9 +1,9 @@
 # IT Tooling Account: Monitoring, Runbooks, and Approved Deployments
 
 
-![IT-Tooling account architecture](../architecture-blueprints/it-toolingaccount.png)
+![IT-Tooling account architecture](../architecture-blueprints/png/it-toolingaccount.png)
 
-[Open the sharp SVG version](../architecture-blueprints/it-toolingaccount.svg)
+[Open the sharp SVG version](../architecture-blueprints/svg/it-toolingaccount.svg)
 | | |
 |---|---|
 | **Project** | NY staffing company, multi-account AWS architecture |
