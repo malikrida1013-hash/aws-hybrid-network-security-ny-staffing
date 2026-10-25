@@ -1,7 +1,7 @@
 # Network Account: One Private Doorway to On-Prem
-![Network account architecture](../architecture-blueprints/networkaccount.png)
+![Network account architecture](../architecture-blueprints/png/networkaccount.png)
 
-[Open the sharp SVG version](../architecture-blueprints/networkaccount.svg)
+[Open the sharp SVG version](../architecture-blueprints/svg/networkaccount.svg)
 | | |
 |---|---|
 | **Project** | NY staffing company, multi-account AWS architecture |
