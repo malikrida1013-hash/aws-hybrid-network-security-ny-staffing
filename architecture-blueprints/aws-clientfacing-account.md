@@ -1,7 +1,7 @@
 # Client-Facing Account: Owner Portal, Kept Apart from Live Systems
-![Client-Facing Account architecture](../architecture-blueprints/clientfacingaccount.png)
+![Client-Facing Account architecture](../architecture-blueprints/png/clientfacingaccount.png)
 
-[Open the sharp SVG version](../architecture-blueprints/clientfaingaccount.svg)
+[Open the sharp SVG version](../architecture-blueprints/svg/clientfaingaccount.svg)
 | | |
 |---|---|
 | **Project** | NY staffing company, multi-account AWS architecture |
