@@ -1,8 +1,8 @@
 # Backup Account: Protected Backups and Recovery
 
-![Backup account architecture](../architecture-blueprints/backupaccount.png)
+![Backup account architecture](../architecture-blueprints/png/backupaccount.png)
 
-[Open the sharp SVG version](../architecture-blueprints/backupaccount.svg)
+[Open the sharp SVG version](../architecture-blueprints/svg/backupaccount.svg)
 
 | | |
 |---|---|
