@@ -1,7 +1,7 @@
 
 # Management Account: Organization, Guardrails, and Billing
 
-<img src="../architecture-blueprints/managementaccount.png" alt="Management account architecture" width="100%">
+<img src="../architecture-blueprints/png/managementaccount.png" alt="Management account architecture" width="100%">
 
 
 | | |
