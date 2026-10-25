@@ -1,6 +1,6 @@
 
 # Production Account: Access and Connectivity
-<img src="../architecture-blueprints/productionaccount.png" alt="Production account architecture" width="100%">
+<img src="../architecture-blueprints/png/productionaccount.png" alt="Production account architecture" width="100%">
 
 | | |
 |---|---|
