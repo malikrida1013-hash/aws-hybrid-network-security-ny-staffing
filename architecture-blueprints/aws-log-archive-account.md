@@ -1,6 +1,6 @@
-![Log Archive account architecture](../architecture-blueprints/logarchiveaccount.png)
+![Log Archive account architecture](../architecture-blueprints/png/logarchiveaccount.png)
 
-[Open the sharp SVG version](../architecture-blueprints/logarchiveaccount.svg)
+[Open the sharp SVG version](../architecture-blueprints/svg/logarchiveaccount.svg)
 
 
 # Log Archive Account: Tamper-Proof Log Storage
