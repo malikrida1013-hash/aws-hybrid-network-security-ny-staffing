@@ -1,7 +1,7 @@
 # Security / Audit Account: Central Detection and Review
-![Security / Audit account architecture](../architecture-blueprints/securityauditaccount.png)
+![Security / Audit account architecture](../architecture-blueprints/png/securityauditaccount.png)
 
-[Open the sharp SVG version](../architecture-blueprints/securityauditaccount.svg)
+[Open the sharp SVG version](../architecture-blueprints/svg/securityauditaccount.svg)
 
 | | |
 |---|---|
