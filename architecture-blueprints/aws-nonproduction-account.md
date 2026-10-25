@@ -1,9 +1,9 @@
 # Non-Production Account: Safe Build and Test
 
 
-![Non-Production account architecture](../architecture-blueprints/nonproductionaccount.png)
+![Non-Production account architecture](../architecture-blueprints/png/nonproductionaccount.png)
 
-[Open the sharp SVG version](../architecture-blueprints/nonproductionaccount.svg)
+[Open the sharp SVG version](../architecture-blueprints/svg/nonproductionaccount.svg)
 
 
 
