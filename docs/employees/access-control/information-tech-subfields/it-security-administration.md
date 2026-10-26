@@ -2,7 +2,7 @@
 
 
 <p align="center">
-  <img src="security-administration.png.png" alt="Workload flow Chart" width="900">
+  <img src="png/security-administration.png.png" alt="Workload flow Chart" width="900">
 </p>
 
 ### *ACCESS PROFILES / PERMISSION SETS:*
@@ -160,7 +160,7 @@ Change requested by Security-Admins member → approved by a different member of
 ## *SECURITY & COMPLIANCE:*
 
 <p align="center">
-  <img src="security-compliance.png.png" alt="Workload flow Chart" width="900">
+  <img src="png/security-compliance.png.png" alt="Workload flow Chart" width="900">
 </p>
 
 
