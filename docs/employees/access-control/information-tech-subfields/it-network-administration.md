@@ -2,7 +2,7 @@
 
 
 <p align="center">
-  <img src="network-administration.png.png" alt="Workload flow Chart" width="900">
+  <img src="png/network-administration.png.png" alt="Workload flow Chart" width="900">
 </p>
 
 
