@@ -3,7 +3,7 @@
 
 
 <p align="center">
-  <img src="service-desk-endpointsupport.png.png" alt="Workload flow Chart" width="900">
+  <img src="png/service-desk-endpointsupport.png.png" alt="Workload flow Chart" width="900">
 </p>
 
 ### *ACCESS PROFILES / PERMISSION SETS:*
