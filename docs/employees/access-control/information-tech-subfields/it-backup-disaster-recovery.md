@@ -2,7 +2,7 @@
 
 
 <p align="center">
-  <img src="backup-disaster-recovery.png.png" alt="Workload flow Chart" width="900">
+  <img src="png/backup-disaster-recovery.png.png" alt="Workload flow Chart" width="900">
 </p>
 
 ### *ACCESS PROFILES / PERMISSION SETS:*
